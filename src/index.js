@@ -6,10 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import ServicioApiCustomers from './components/ServicioApiCustomers';
 import ServiceApiSuppliers from './components/ServiceApiSuppliers';
 import ServiceEmpleadosDepartamento from './components/ServiceEmpleadosDepartamento';
+import ServiceEmpleadosDepartamentov2 from './components/ServiceEmpleadosDepartamentov2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <ServiceEmpleadosDepartamento/>
+    <ServiceEmpleadosDepartamentov2/>
 );
 
 // If you want to start measuring performance in your app, pass a function
