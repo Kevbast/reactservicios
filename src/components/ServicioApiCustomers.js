@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //traemos axios
 import axios from 'axios'
-
+import Global from '../Global'//PARA LAS URL GLOBALES
 export default class ServicioApiCustomers extends Component {
     //creamos una variable,no puede ser en state,ya que solo llega una vez al cargar los datos
     //EL DIBUJO NO ES INMEDIATO,PUESTO Q NO SABEMOS CUANTO VA A TARDAR EN LLEGAR LOS DATOS
