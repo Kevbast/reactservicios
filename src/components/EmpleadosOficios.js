@@ -5,10 +5,9 @@ import Global from '../Global';
 export default class EmpleadosOficios extends Component {
     selectDept=React.createRef();
     url=Global.urlEmpleados;
-    urlDepartamentos=Global.urlDepartamentos;
     
     state={
-        empleados:[],//donde van a estar todos los proveedores
+        empleados:[],//donde van a estar todos los empleados de ese oficio que le pasemos
         oficios:[]
     }
     
@@ -16,10 +15,10 @@ export default class EmpleadosOficios extends Component {
         event.preventDefault();
         let ofiempleados=this.selectDept.current.value;
         console.log(ofiempleados)
-        //request empleados por id del departamento
+        //request empleados por el oficio
         var request="api/Empleados/EmpleadosOficio/"+ ofiempleados;
         axios.get(this.url+request).then(response=>{
-            console.log("Leyendo Servicio");
+            console.log("Leyendo Servicio DE EMPLEADOS");
             console.log(response.data);
             //console.log(response.data[0]);
             this.setState({
@@ -28,21 +27,21 @@ export default class EmpleadosOficios extends Component {
         })
     }
 
-    //CARGAMOS PREVIAMENTE LA LISTA DE LOS DEPARTAMENTOS
+    //CARGAMOS PREVIAMENTE LA LISTA DE LOS EMPLEADOS PARA SACAR LOS OFICIOS
     loadOficios=()=>{
         let request="api/Empleados";
-        console.log("Antes del servicio");
+        console.log("Antes del servicio de OFICIOS");
         
         //console.log(kevin) THIS.KEVIN!!
         axios.get(this.url+request).then(response=>{
-            console.log("Leyendo servicio")
+            console.log("Leyendo servicio de OFICIOS")
             console.log(response.data)
-            var ofiaux=[];
+            var ofiaux=[];//VARIABLE AUXILIAR
             var empleados=response.data
-            //función filtro para los oficios de los empleados
+            //Función filtro para los oficios de los empleados
             empleados.forEach((empleado) => {
                 if(!ofiaux.includes(empleado.oficio)){
-                    ofiaux.push(empleado.oficio);
+                    ofiaux.push(empleado.oficio);//GUARDAMOS LOS OFICIOS ÚNICOS
                     console.log(ofiaux);//MIRAR BIEN EL FILTRO
                 }
             });
@@ -61,8 +60,8 @@ export default class EmpleadosOficios extends Component {
   render() {
     return (
       <div>
-        <h1>ServiceEmpleadosDepartamento</h1>
-
+        <h1>ServiceEmpleadosOficios</h1>
+        {/* RECOGEMOS LA LISTA EN UN SELECT FILTRANDO LOS OFICIOS DE OS EMPLEADOS */}
         <form >
             <h2>Buscar por empleados por oficio</h2>
             <label>Id: </label>
