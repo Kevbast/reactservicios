@@ -7,6 +7,7 @@ export default class MenuRutas extends Component {
             <h1 style={{backgroundColor:"cyan"}}>MENÚ RUTAS </h1>
         <ul>
             <li><a href='/'>Home</a></li>
+            <li><a href='/cursos'>Cursos Alumnos</a></li>
             <li><a href='/tabla/21'>Tabla de multiplicar 21</a></li>               
             <li><a href='/tabla/33'>Tabla de multiplicar 33</a></li>               
             <li><a href='/collatz/22'>Conjetura collatz 22</a></li>               

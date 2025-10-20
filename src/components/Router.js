@@ -6,6 +6,7 @@ import TabladeMultiplicar from './TabladeMultiplicar'
 import NotFound from './NotFound'
 import { useParams } from 'react-router-dom'// puede estar en la linea 2
 import Collatz from './Collatz'
+import Cursos from './ejemplocomunicacion/Cursos'
 export default class Router extends Component {
   render() {
 
@@ -27,6 +28,7 @@ export default class Router extends Component {
       <BrowserRouter>
         <Routes>
             <Route path='/' element={<Home/>}/>
+            <Route path='/cursos' element={<Cursos/>}/>
             <Route path='/tabla/:minumero' element={<TablaMultiplicarElement/>}/>
             <Route path='/collatz/:minumero' element={<CollatzElement/>}/>
             {/* PARA INCLUIR LAS RUTAS QUE NO EXISTEN CON UNA PÁGINA 404 PERSONALIZADA DEBEMOS UTILIZAR EL * 
