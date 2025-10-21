@@ -19,6 +19,12 @@ export default class TabladeMultiplicar extends Component {
             tabla:aux
         })
     }
+    //lo utilizamos,ya que estamos usando navlink y no se recarga la página
+    componentDidUpdate=(oldProps)=>{
+        if(oldProps.numero!=this.props.numero){
+            this.generarTablaMultiplicar();
+        }
+    }
 
     componentDidMount=()=>{
         this.generarTablaMultiplicar();

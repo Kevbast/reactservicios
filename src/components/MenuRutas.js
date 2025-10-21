@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default class MenuRutas extends Component {
   render() {
@@ -6,12 +7,13 @@ export default class MenuRutas extends Component {
         <div>
             <h1 style={{backgroundColor:"cyan"}}>MENÚ RUTAS </h1>
         <ul>
-            <li><a href='/'>Home</a></li>
-            <li><a href='/cursos'>Cursos Alumnos</a></li>
-            <li><a href='/tabla/21'>Tabla de multiplicar 21</a></li>               
-            <li><a href='/tabla/33'>Tabla de multiplicar 33</a></li>               
-            <li><a href='/collatz/22'>Conjetura collatz 22</a></li>               
-            <li><a href='/collatz/77'>Conjetura collatz 77</a></li>               
+            <li>
+              <NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/cursos'>Cursos Alumnos</NavLink></li>
+            <li><NavLink to='/tabla/21'>Tabla de multiplicar 21</NavLink></li>               
+            <li><NavLink to='/tabla/33'>Tabla de multiplicar 33</NavLink></li>               
+            <li><NavLink to='/collatz/22'>Conjetura collatz 22</NavLink></li>               
+            <li><NavLink to='/collatz/77'>Conjetura collatz 77</NavLink></li>               
         </ul>
       </div>
 

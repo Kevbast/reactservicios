@@ -24,6 +24,13 @@ export default class Collatz extends Component {
         })
 
     }
+    //lo utilizamos,ya que estamos usando navlink y no se recarga la página
+    componentDidUpdate=(oldProps)=>{
+        if(oldProps.numero!=this.props.numero){
+            this.generarCollatz();
+        }
+    }
+
     componentDidMount=()=>{
         this.generarCollatz();
     }

@@ -7,6 +7,7 @@ import NotFound from './NotFound'
 import { useParams } from 'react-router-dom'// puede estar en la linea 2
 import Collatz from './Collatz'
 import Cursos from './ejemplocomunicacion/Cursos'
+import MenuRutas from './MenuRutas'
 export default class Router extends Component {
   render() {
 
@@ -26,6 +27,7 @@ export default class Router extends Component {
 
     return (
       <BrowserRouter>
+      <MenuRutas/>
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/cursos' element={<Cursos/>}/>
