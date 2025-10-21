@@ -36,22 +36,20 @@ export default class Alumnos extends Component {
 
   render() {
     return (
-      <div>
-        <h1 style={{color:"red"}}>Alumnos component(hijo) {this.props.idcurso}</h1>
-    <ul>
-        {   //AQUÍ VISUALIZAMOS LA LISTA DE ALUMNOS GRACIAS AL ID PASADO POR EL PADRE
-            this.state.alumnos.map((alumn,index)=>{
-                return (<li key={index}>
-                 {alumn.nombre} - {alumn.apellidos}-<button value={alumn.idCurso} onClick={()=>{//HACEMOS UNA FUNCIÓN POR LAMBDA
-                   var index =parseInt(alumn.idAlumno);
-                   this.props.detailsAlumn(index) //EN VEZ DEL ID PODRÍAMOS PASAR SIMPLEMENTE EL OBJETO Y YA 
-                 }}>Detalles</button> </li>)
-                  
-            })
-        }
-    </ul>
-      
-      </div>
-    )
-  }
+    <div>
+        <h1 style={{color:"red"}}>Alumnos component(hijo) Curso: {this.props.idcurso}</h1>
+        <ul>
+            {   //AQUÍ VISUALIZAMOS LA LISTA DE ALUMNOS GRACIAS AL ID PASADO POR EL PADRE
+                this.state.alumnos.map((alumn,index)=>{
+                    return (<li key={index}>
+                    {alumn.nombre} - {alumn.apellidos}-<button onClick={()=>{//HACEMOS UNA FUNCIÓN POR LAMBDA
+                      var index =parseInt(alumn.idAlumno);
+                      this.props.detailsAlumn(index) //EN VEZ DEL ID PODRÍAMOS PASAR SIMPLEMENTE EL OBJETO Y YA 
+                    }}>Detalles</button> </li>)
+                      
+                })
+            }
+        </ul>      
+    </div>
+    )}
 }
