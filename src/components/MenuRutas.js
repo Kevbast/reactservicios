@@ -14,6 +14,7 @@ export default class MenuRutas extends Component {
             <li><NavLink to='/tabla/33'>Tabla de multiplicar 33</NavLink></li>               
             <li><NavLink to='/collatz/22'>Conjetura collatz 22</NavLink></li>               
             <li><NavLink to='/collatz/77'>Conjetura collatz 77</NavLink></li>               
+            <li><NavLink to='/hospmulti'>Hospital</NavLink></li>               
         </ul>
       </div>
 

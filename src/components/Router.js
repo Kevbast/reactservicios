@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom'// puede estar en la linea 2
 import Collatz from './Collatz'
 import Cursos from './ejemplocomunicacion/Cursos'
 import MenuRutas from './MenuRutas'
+import HospitalesMultiple from './selectmultiple/HospitalesMultiple'
 export default class Router extends Component {
   render() {
 
@@ -33,6 +34,7 @@ export default class Router extends Component {
             <Route path='/cursos' element={<Cursos/>}/>
             <Route path='/tabla/:minumero' element={<TablaMultiplicarElement/>}/>
             <Route path='/collatz/:minumero' element={<CollatzElement/>}/>
+            <Route path='/hospmulti' element={<HospitalesMultiple/>}/>
             {/* PARA INCLUIR LAS RUTAS QUE NO EXISTEN CON UNA PÁGINA 404 PERSONALIZADA DEBEMOS UTILIZAR EL * 
             Y SIEMPRE DEBE SER LA ÚLTIMA RUTA */}
             <Route path='*' element={<NotFound/>}/>
