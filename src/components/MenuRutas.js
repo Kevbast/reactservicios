@@ -10,6 +10,7 @@ export default class MenuRutas extends Component {
             <li>
               <NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/cursos'>Cursos Alumnos</NavLink></li>
+            <li><NavLink to='/departempleado'>Departamentos de empleado</NavLink></li>
             <li><NavLink to='/tabla/21'>Tabla de multiplicar 21</NavLink></li>               
             <li><NavLink to='/tabla/33'>Tabla de multiplicar 33</NavLink></li>               
             <li><NavLink to='/collatz/22'>Conjetura collatz 22</NavLink></li>               

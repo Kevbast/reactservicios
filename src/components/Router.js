@@ -9,6 +9,7 @@ import Collatz from './Collatz'
 import Cursos from './ejemplocomunicacion/Cursos'
 import MenuRutas from './MenuRutas'
 import HospitalesMultiple from './selectmultiple/HospitalesMultiple'
+import Departamentos from './maestrodetalle/Departamentos'
 export default class Router extends Component {
   render() {
 
@@ -32,6 +33,7 @@ export default class Router extends Component {
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/cursos' element={<Cursos/>}/>
+            <Route path='/departempleado' element={<Departamentos/>}/>
             <Route path='/tabla/:minumero' element={<TablaMultiplicarElement/>}/>
             <Route path='/collatz/:minumero' element={<CollatzElement/>}/>
             <Route path='/hospmulti' element={<HospitalesMultiple/>}/>

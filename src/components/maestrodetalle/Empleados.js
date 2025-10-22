@@ -46,7 +46,7 @@ export default class Empleados extends Component {
 
         <h1 style={{color:"red"}}>Empleados Component {this.props.iddepartamento}</h1>
         
-        <h1 style={{color:"green"}}>Empleados Component {this.state.texto}</h1>  VEMOS QUE ESTO DA ERROR
+        {/* <h1 style={{color:"green"}}>Empleados Component {this.state.texto}</h1>  VEMOS QUE ESTO DA ERROR */}
         <table border="1" style={{textAlign:"center"}}>
                 <thead>
                     <tr>
