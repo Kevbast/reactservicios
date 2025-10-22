@@ -7,8 +7,7 @@ export default class MenuRutas extends Component {
         <div>
             <h1 style={{backgroundColor:"cyan"}}>MENÚ RUTAS </h1>
         <ul>
-            <li>
-              <NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/'>Home</NavLink></li>
             <li><NavLink to='/cursos'>Cursos Alumnos</NavLink></li>
             <li><NavLink to='/departempleado'>Departamentos de empleado</NavLink></li>
             <li><NavLink to='/tabla/21'>Tabla de multiplicar 21</NavLink></li>               
