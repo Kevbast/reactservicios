@@ -14,7 +14,6 @@ export default class HospitalesMultiple extends Component {
     state={
         hospitales:[],
         hospitalesSelect:[],
-        salario:0//PARA EL UPDATE
     }
     //lo vamos a  rellenar con los ids de los hospitales
     
@@ -59,14 +58,12 @@ export default class HospitalesMultiple extends Component {
         }
         aux=aux.substring(0,aux.length - 1);
         console.log(aux)
-        this.setState({
-            salario:salario
-        })
         //EMPEZAMOS CON LA REQUEST
         let request="api/trabajadores/updatesalariotrabajadoreshospitales?incremento="+salario+"&"+aux;
         console.log(request);
         axios.put(this.url+request).then(response=>{
-            console.log("SALARIO ACTUALIZADO!!!")
+            console.log("SALARIO ACTUALIZADO!!!");
+            this.getHospitalesSeleccionados(event);//LLAMAMOS AL MÉTODO CON EL EVENT SI QUEREMOS VISUALIZAR            
         })
     }
 
@@ -91,7 +88,7 @@ export default class HospitalesMultiple extends Component {
         </form>
         {
             this.state.hospitalesSelect.length !=0 &&
-            <Trabajadores salario={this.state.salario} idhospitales={this.state.hospitalesSelect}/>
+            <Trabajadores idhospitales={this.state.hospitalesSelect}/>
         }
       </div>
     )
